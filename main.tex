@@ -3,6 +3,7 @@
 
 % --- Essential Input & Layout ---
 \usepackage[utf8]{inputenc}
+% Margin is set to 0pt for the cover page to allow full-page scaling
 \usepackage[margin=2cm, headheight=15pt, headsep=15pt, footskip=20pt]{geometry}
 \usepackage{graphicx}
 \usepackage{lastpage}
@@ -10,10 +11,7 @@
 \usepackage[hidelinks]{hyperref}
 
 % --- Core Mathematics Packages ---
-\usepackage{amsmath}    % For equations, matrices, and alignment
-\usepackage{amssymb}    % For mathematical symbols
-\usepackage{amsfonts}   % For mathematical fonts
-\usepackage{bm}         % For bold math symbols
+\usepackage{amsmath, amssymb, amsfonts, bm}
 
 % --- Graphics & Technical Drawing ---
 \usepackage{tikz}       
@@ -23,12 +21,10 @@
 
 % --- Tables & Formatting ---
 \usepackage[most]{tcolorbox}      
-\tcbuselibrary{breakable}         % CRITICAL: Allows boxes to span multiple pages
-\usepackage{tabularx}             
-\usepackage{array}                
-\usepackage{tocloft}              
+\tcbuselibrary{breakable}
+\usepackage{tabularx, array, tocloft}              
 
-% --- Custom Colors (Standard Elevation Pillar Palette) ---
+% --- Custom Colors ---
 \definecolor{primaryblue}{RGB}{0, 51, 102}
 \definecolor{strandcolor}{RGB}{0, 102, 204}
 \definecolor{substrandcolor}{RGB}{0, 153, 76}
@@ -62,47 +58,16 @@
     before upper={\textbf{Step-by-Step Working} \hfill \textbf{Marking Scheme}\medskip\\}
 }
 
-% --- THE GATE: BEGIN CONTENT ---
 \begin{document}
-\pagestyle{contentpages}
 
-% --- COVER PAGE ---
+% --- COVER PAGE (Scaled to Full Page) ---
 \begin{titlepage}
+    \newgeometry{margin=0pt} % Removes margins for the cover only
     \centering
-    \vspace*{0cm}
-    \includegraphics[width=0.9\textwidth, height=\textheight, keepaspectratio]{cover.jpg} 
-    
-    \vfill
-    \textbf{\large Junior School Mathematics Master Class} \\
-    \textit{Elevation Pillar Digital Library} \\
-    \medskip
-    \copyright\ \the\year\ Peter Musau Mutua
+    \includegraphics[width=\paperwidth, height=\paperheight]{cover.jpg} 
+    \restoregeometry % Restores 2cm margins for the rest of the book
 \end{titlepage}
 
-% --- PRELIMINARIES ---
-\pagenumbering{roman} 
-\tableofcontents
-\newpage
-
-\pagenumbering{arabic} 
-\setcounter{page}{1}
-
-% --- START OF CONTENT ---
-
-% [PASTE YOUR STRANDS AND SUB-STRANDS HERE]
-
-\section*{\color{primaryblue}STRAND 1: NUMBERS}
-\addcontentsline{toc}{section}{STRAND 1: NUMBERS}
-
-% Example Content Entry
-\subsection*{\color{strandcolor}1.1 Reciprocals}
-\addcontentsline{toc}{subsection}{1.1 Reciprocals}
-
-\begin{solvingbox}{Practice Question}
-Sample content will go here.
-\end{solvingbox}
-
-
 % --- THE FINAL SEAL ---
-% Ensure this line is ALWAYS at the very bottom of your code.
+% You will continue from here by adding your TOC and Strands.
 \end{document}
