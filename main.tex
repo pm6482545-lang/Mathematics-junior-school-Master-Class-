@@ -1,0 +1,67 @@
+% --- Document Configuration ---
+\documentclass[12pt, a4paper, oneside]{article}
+
+% --- Essential Input & Layout ---
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2cm, headheight=15pt, headsep=15pt, footskip=20pt]{geometry}
+\usepackage{graphicx}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+
+% --- Core Mathematics Packages ---
+\usepackage{amsmath}    % For equations, matrices, and alignment
+\usepackage{amssymb}    % For mathematical symbols
+\usepackage{amsfonts}   % For mathematical fonts
+\usepackage{bm}         % For bold math symbols
+
+% --- Graphics & Technical Drawing ---
+\usepackage{tikz}       
+\usetikzlibrary{shapes.geometric, positioning, arrows.meta, calc} 
+\usepackage{pgfplots}             
+\pgfplotsset{compat=1.18}         
+
+% --- Tables & Formatting ---
+\usepackage[most]{tcolorbox}      % Required for boxes
+\tcbuselibrary{breakable}         % CRITICAL: Allows boxes to span multiple pages
+\usepackage{tabularx}             
+\usepackage{array}                
+\usepackage{tocloft}              
+
+% --- Custom Colors (Standard Elevation Pillar Palette) ---
+\definecolor{primaryblue}{RGB}{0, 51, 102}
+\definecolor{strandcolor}{RGB}{0, 102, 204}
+\definecolor{substrandcolor}{RGB}{0, 153, 76}
+\definecolor{lightgrey}{RGB}{245, 245, 245}
+
+% --- TOC Advanced Styling ---
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsecfont}{\bfseries\color{strandcolor}\large}
+\renewcommand{\cftsecpagefont}{\bfseries\color{strandcolor}}
+\setlength{\cftbeforesecskip}{12pt} 
+\renewcommand{\cftsubsecfont}{\itshape\color{substrandcolor}}
+\renewcommand{\cftsubsecpagefont}{\normalfont\color{substrandcolor}}
+\setlength{\cftbeforesubsecskip}{2pt} 
+
+% --- Header/Footer Setup ---
+\fancypagestyle{contentpages}{
+    \fancyhf{}
+    \fancyhead[L]{\textit{Master Class Mathematics}}
+    \fancyhead[R]{Elevation Pillar}
+    \fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+}
+
+% --- Custom Environment for Questions ---
+\newtcolorbox{solvingbox}[1]{%
+    colback=white, 
+    colframe=black!80, 
+    sharp corners, 
+    fonttitle=\bfseries, 
+    title=#1,
+    breakable, % Allows the box to break across pages safely
+    before upper={\textbf{Step-by-Step Working} \hfill \textbf{Marking Scheme}\medskip\\}
+}
+
+% --- THE GATE: BEGIN CONTENT ---
+\begin{document}
+\pagestyle{contentpages}
