@@ -1,16 +1,10 @@
 name: Build LaTeX Book
-
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+on: [push]
 jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Set up Git repository
         uses: actions/checkout@v4
 
       - name: Compile LaTeX document
@@ -18,8 +12,19 @@ jobs:
         with:
           root_file: main.tex
 
-      - name: Upload PDF
-        uses: actions/upload-artifact@v4
-        with:
-          name: Mathematics-Junior-School
-          path: main.pdf
+      - name: Check for PDF
+        run: |
+          if [ -f main.pdf ]; then
+            echo "PDF generated successfully."
+          else
+            echo "PDF not found!"
+            exit 1
+          fi
+
+      - name: Commit and Push PDF
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add main.pdf
+          git commit -m "Automated PDF update" || echo "No changes to commit"
+          git push
