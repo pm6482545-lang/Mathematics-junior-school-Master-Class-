@@ -65,3 +65,26 @@
 % --- THE GATE: BEGIN CONTENT ---
 \begin{document}
 \pagestyle{contentpages}
+% --- COVER PAGE ---
+\begin{titlepage}
+    \centering
+    \vspace*{0cm}
+    % This pulls your uploaded cover.jpg file
+    \includegraphics[width=0.9\textwidth, height=\textheight, keepaspectratio]{cover.jpg} 
+    
+    \vfill
+    \textbf{\large Junior School Mathematics Master Class} \\
+    \textit{Elevation Pillar Digital Library} \\
+    \medskip
+    \copyright\ \the\year\ Peter Musau Mutua
+\end{titlepage}
+
+% --- PRELIMINARIES ---
+\pagenumbering{roman} % Uses i, ii, iii for intro pages
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic} % Switches to 1, 2, 3 for the main content
+\setcounter{page}{1}
+
+% --- START OF CONTENT ---
