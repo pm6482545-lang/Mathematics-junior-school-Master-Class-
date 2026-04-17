@@ -71,3 +71,119 @@
 % --- THE FINAL SEAL ---
 % You will continue from here by adding your TOC and Strands.
 \end{document}
+% --- 2. TABLE OF CONTENTS ---
+\newgeometry{margin=2cm, top=1.5cm, bottom=2cm}
+\pagenumbering{roman}
+\setcounter{page}{1}
+\pagestyle{plain}
+
+\begin{center}
+    \begin{tcolorbox}[colback=primaryblue, colframe=primaryblue, arc=0pt, center title, width=\textwidth]
+        \color{white}\Large\bfseries TABLE OF CONTENTS
+    \end{tcolorbox}
+\end{center}
+
+\vspace{0.2cm}
+
+% Manual TOC entries to match your unnumbered sections
+\addcontentsline{toc}{section}{1.0 Numbers}
+\addcontentsline{toc}{subsection}{Whole numbers}
+\addcontentsline{toc}{subsection}{Factors}
+\addcontentsline{toc}{subsection}{Fractions}
+\addcontentsline{toc}{subsection}{Decimals}
+\addcontentsline{toc}{subsection}{Squares and square roots}
+\addcontentsline{toc}{subsection}{Integers}
+\addcontentsline{toc}{subsection}{Cubes and cube roots}
+\addcontentsline{toc}{subsection}{Rates, ratio, proportions and percentages}
+\addcontentsline{toc}{subsection}{Indices and logarithms}
+
+\addcontentsline{toc}{section}{2.0 Algebra}
+\addcontentsline{toc}{subsection}{Algebraic expressions}
+\addcontentsline{toc}{subsection}{Linear equations}
+\addcontentsline{toc}{subsection}{Linear inequalities}
+\addcontentsline{toc}{subsection}{Equation of a straight line}
+\addcontentsline{toc}{subsection}{Matrices}
+
+\addcontentsline{toc}{section}{3.0 Measurements}
+\addcontentsline{toc}{subsection}{Pythagorean relationship}
+\addcontentsline{toc}{subsection}{Length}
+\addcontentsline{toc}{subsection}{Circles}
+\addcontentsline{toc}{subsection}{Area}
+\addcontentsline{toc}{subsection}{Volume and capacity}
+\addcontentsline{toc}{subsection}{Mass, volume, weight and density}
+\addcontentsline{toc}{subsection}{Time, distance and speed}
+\addcontentsline{toc}{subsection}{Temperature}
+\addcontentsline{toc}{subsection}{Money}
+\addcontentsline{toc}{subsection}{Approximation and errors}
+
+\addcontentsline{toc}{section}{4.0 Geometry}
+\addcontentsline{toc}{subsection}{Angles}
+\addcontentsline{toc}{subsection}{Geometrical constructions}
+\addcontentsline{toc}{subsection}{Coordinates and graphs}
+\addcontentsline{toc}{subsection}{Scale drawing}
+\addcontentsline{toc}{subsection}{Common solids}
+\addcontentsline{toc}{subsection}{Similarity and enlargement}
+\addcontentsline{toc}{subsection}{Trigonometry}
+
+\addcontentsline{toc}{section}{5.0 Data handling and probability}
+\addcontentsline{toc}{subsection}{Data handling}
+\addcontentsline{toc}{subsection}{Data presentation and interpretation}
+\addcontentsline{toc}{subsection}{Data interpretation (Grouped Data)}
+\addcontentsline{toc}{subsection}{Probability}
+
+\vspace{10pt}
+\addcontentsline{toc}{section}{KJSEA SAMPLE PAPERS}
+\addcontentsline{toc}{section}{MARKING SCHEME}
+
+\tableofcontents
+\vfill 
+\clearpage
+
+% --- 3. START CONTENT ---
+\pagenumbering{arabic}
+\setcounter{page}{1} 
+\restoregeometry % Restores the 2cm margins defined in preamble
+\pagestyle{contentpages}
+
+\begin{center}
+    \begin{tcolorbox}[colback=strandcolor!10, colframe=strandcolor, width=0.6\textwidth, arc=10pt, center title]
+        \centering \Large \bfseries \color{strandcolor} 1.0 NUMBERS
+    \end{tcolorbox}
+\end{center}
+
+\section*{1.1 Place Value and Total Value}
+
+\begin{tcolorbox}[colback=lightgrey, colframe=primaryblue, title=\textbf{Concept Summary}, arc=5pt]
+    \textbf{Place Value:} Refers to the \textit{name of the position} a digit occupies in a number. \\
+    \textbf{Total Value:} Refers to the \textit{numerical worth} of a digit based on its position. \\
+    \textbf{Formula:} $\text{Total Value} = \text{Digit} \times \text{Place Value Representation}$
+    
+    \vspace{10pt}
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{|X|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{Digit} & 7 & 4 & 1 & 0 & 3 & 9 & 5 \\ \hline
+    \textbf{Place Value} & Millions & H-Th & T-Th & Th & H & T & O \\ \hline
+    \end{tabularx}
+\end{tcolorbox}
+
+\begin{solvingbox}{Question 1}
+Identify the \textbf{place value} and the \textbf{total value} of the underlined digit in the number: $4,\underline{7}82,105$. \\
+\textbf{Working:} \\
+Underlined digit is 7. \\
+Position: 2nd place from the left in the millions period (Hundreds of Thousands). \\
+Place Value: \textbf{Hundred Thousands} \hfill $M_1$ \\
+Total Value: $7 \times 100,000 = \mathbf{700,000}$ \hfill $A_1$
+\end{solvingbox}
+
+\begin{solvingbox}{Question 2}
+What is the difference between the total value of digit 8 and digit 3 in the number $843,210$? \\
+\textbf{Working:} \\
+Total Value of 8: $8 \times 100,000 = 800,000$ \hfill $M_1$ \\
+Total Value of 3: $3 \times 1,000 = 3,000$ \hfill $M_1$ \\
+Difference: $800,000 - 3,000 = \mathbf{797,000}$ \hfill $A_1$
+\end{solvingbox}
+
+% --- THE FINAL SEAL ---
+\end{document}
