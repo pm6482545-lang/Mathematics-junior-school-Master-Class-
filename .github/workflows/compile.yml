@@ -19,7 +19,7 @@ jobs:
           root_file: main.tex
 
       - name: Upload PDF
-        uses: actions/objects-upload@v2 # Updated for compatibility
+        uses: actions/upload-artifact@v4
         with:
           name: Mathematics-Junior-School
           path: main.pdf
