@@ -22,7 +22,7 @@
 \pgfplotsset{compat=1.18}         
 
 % --- Tables & Formatting ---
-\usepackage[most]{tcolorbox}      % Required for boxes
+\usepackage[most]{tcolorbox}      
 \tcbuselibrary{breakable}         % CRITICAL: Allows boxes to span multiple pages
 \usepackage{tabularx}             
 \usepackage{array}                
@@ -58,18 +58,18 @@
     sharp corners, 
     fonttitle=\bfseries, 
     title=#1,
-    breakable, % Allows the box to break across pages safely
+    breakable, 
     before upper={\textbf{Step-by-Step Working} \hfill \textbf{Marking Scheme}\medskip\\}
 }
 
 % --- THE GATE: BEGIN CONTENT ---
 \begin{document}
 \pagestyle{contentpages}
+
 % --- COVER PAGE ---
 \begin{titlepage}
     \centering
     \vspace*{0cm}
-    % This pulls your uploaded cover.jpg file
     \includegraphics[width=0.9\textwidth, height=\textheight, keepaspectratio]{cover.jpg} 
     
     \vfill
@@ -80,11 +80,29 @@
 \end{titlepage}
 
 % --- PRELIMINARIES ---
-\pagenumbering{roman} % Uses i, ii, iii for intro pages
+\pagenumbering{roman} 
 \tableofcontents
 \newpage
 
-\pagenumbering{arabic} % Switches to 1, 2, 3 for the main content
+\pagenumbering{arabic} 
 \setcounter{page}{1}
 
 % --- START OF CONTENT ---
+
+% [PASTE YOUR STRANDS AND SUB-STRANDS HERE]
+
+\section*{\color{primaryblue}STRAND 1: NUMBERS}
+\addcontentsline{toc}{section}{STRAND 1: NUMBERS}
+
+% Example Content Entry
+\subsection*{\color{strandcolor}1.1 Reciprocals}
+\addcontentsline{toc}{subsection}{1.1 Reciprocals}
+
+\begin{solvingbox}{Practice Question}
+Sample content will go here.
+\end{solvingbox}
+
+
+% --- THE FINAL SEAL ---
+% Ensure this line is ALWAYS at the very bottom of your code.
+\end{document}
