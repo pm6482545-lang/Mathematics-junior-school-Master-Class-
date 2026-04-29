@@ -8,6 +8,7 @@
 \usepackage{lastpage}
 \usepackage{fancyhdr}
 \usepackage[hidelinks]{hyperref}
+\usepackage{afterpage}
 
 % --- Core Mathematics Packages ---
 \usepackage{amsmath}    
@@ -23,7 +24,6 @@
 \pgfplotsset{compat=1.18}         
 
 % --- Custom Colors (Standard Elevation Pillar Palette) ---
-% These MUST remain here, above the tcolorbox definitions
 \definecolor{primaryblue}{RGB}{0, 51, 102}
 \definecolor{strandcolor}{RGB}{0, 102, 204}
 \definecolor{substrandcolor}{RGB}{0, 153, 76}
@@ -31,10 +31,9 @@
 
 % --- Advanced Box Setup ---
 \usepackage[most]{tcolorbox}
-\tcbuselibrary{breakable, skins}
+\tcbuselibrary{breakable, skins, theorems}
 
 % --- FIXED: Single definition of solvingbox ---
-% Supporting both the Blue Elevation Pillar style and the Marking Scheme header.
 \newtcolorbox{solvingbox}[1]{%
     colback=white, 
     colframe=primaryblue!75!black, 
@@ -60,6 +59,7 @@
 \renewcommand{\cftsubsecfont}{\itshape\color{substrandcolor}}
 \renewcommand{\cftsubsecpagefont}{\normalfont\color{substrandcolor}}
 \setlength{\cftbeforesubsecskip}{2pt} 
+
 % --- Header Style Definition ---
 \fancypagestyle{contentpages}{
     \fancyhf{}
@@ -68,13 +68,6 @@
     \fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
     \renewcommand{\headrulewidth}{0.4pt}
 }
-
-% --- Header/Footer Setup ---
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[L]{\textit{Master Class Mathematics}}
-\fancyhead[R]{Elevation Pillar}
-\fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
 
 \begin{document}
 
