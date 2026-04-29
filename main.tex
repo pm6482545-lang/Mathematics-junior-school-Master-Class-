@@ -21,6 +21,21 @@
 \usepackage{pgfplots}             
 \pgfplotsset{compat=1.18}         
 
+\usetikzlibrary{arrows.meta, patterns, shapes.geometric}
+
+\usepackage[most]{tcolorbox}
+\newtcolorbox{solvingbox}[2][]{
+    colback=white,
+    colframe=primaryblue!75!black,
+    fonttitle=\bfseries,
+    title=#2,
+    breakable,
+    enhanced,
+    attach boxed title to top left={yshift=-2mm, xshift=2mm},
+    boxed title style={colback=primaryblue},
+    #1
+}
+
 % --- Tables & Formatting ---
 \usepackage[most]{tcolorbox}      
 \tcbuselibrary{breakable}         
