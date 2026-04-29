@@ -4886,5 +4886,168 @@ Intercepts: $(4,0), (0,3)$. \hfill $M_1$ \\
     \draw[ultra thick, primaryblue] (-0.66,3.5) -- (4.66,-0.5) node[above right] {$3x+4y=12$};
 \end{tikzpicture} \hfill $A_1$
 \end{solvingbox}
+\newpage
+\subsection*{2.4 Equations of Straight Lines}
+\addcontentsline{toc}{subsection}{2.4 Equations of Straight Lines}
+
+\begin{tcolorbox}[colback=lightgrey, colframe=primaryblue, title=\textbf{Teacher's Concept: The Geometry of Slopes}, arc=5pt]
+    A straight line represents a constant rate of change between two variables.
+    \begin{itemize}
+        \item \textbf{Gradient ($m$):} This is the "steepness" of a line. It is calculated as $m = \frac{y_2 - y_1}{x_2 - x_1}$.
+        \item \textbf{General Equation:} $y = mx + c$, where $m$ is the gradient and $c$ is the $y$-intercept.
+        \item \textbf{Point-Gradient Formula:} $y - y_1 = m(x - x_1)$.
+    \end{itemize}
+\end{tcolorbox}
+
+\subsection*{2.4.1 Finding Gradient of Lines Given Two Points}
+\addcontentsline{toc}{subsection}{2.4.1 Finding Gradient of Lines}
+
+\begin{solvingbox}{Question 1}
+A mountain climber starts at an altitude of \textbf{1,200m} at 8:00 AM. By 11:00 AM, the climber has reached an altitude of \textbf{2,100m}. If time is the $x$-axis (in hours) and altitude is the $y$-axis, find the gradient of the climber's ascent. \\
+Points: $(0, 1200)$ and $(3, 2100)$ \hfill $M_1$ \\
+$m = \frac{2100 - 1200}{3 - 0} = \frac{900}{3}$ \hfill $M_1$ \\
+Result: $\mathbf{m = 300\text{ m/hr}}$ \hfill $A_1$
+\end{solvingbox}
+
+\begin{solvingbox}{Question 2}
+The cost of producing \textbf{50 units} of a product is \textbf{Sh. 15,000}, while the cost of producing \textbf{150 units} is \textbf{Sh. 35,000}. Find the gradient, which represents the variable cost per unit. \\
+Points: $(50, 15000)$ and $(150, 35000)$ \hfill $M_1$ \\
+$m = \frac{35000 - 15000}{150 - 50} = \frac{20000}{100}$ \hfill $M_1$ \\
+Result: $\mathbf{m = 200}$ \hfill $A_1$
+\end{solvingbox}
+
+\begin{solvingbox}{Question 3}
+A water tank is being drained. At \textbf{2 minutes}, the volume of water is \textbf{480 litres}. At \textbf{7 minutes}, the volume has dropped to \textbf{330 litres}. Find the gradient of the drainage. \\
+Points: $(2, 480)$ and $(7, 330)$ \hfill $M_1$ \\
+$m = \frac{330 - 480}{7 - 2} = \frac{-150}{5}$ \hfill $M_1$ \\
+Result: $\mathbf{m = -30\text{ litres/min}}$ \hfill $A_1$
+\end{solvingbox}
+
+\begin{solvingbox}{Question 4}
+A spring stretches to a length of \textbf{15 cm} when a \textbf{2 kg} mass is attached. When a \textbf{5 kg} mass is attached, it stretches to \textbf{21 cm}. Find the gradient (stretch per kg). \\
+Points: $(2, 15)$ and $(5, 21)$ \hfill $M_1$ \\
+$m = \frac{21 - 15}{5 - 2} = \frac{6}{3}$ \hfill $M_1$ \\
+Result: $\mathbf{m = 2\text{ cm/kg}}$ \hfill $A_1$
+\end{solvingbox}
+
+\begin{solvingbox}{Question 5}
+The population of a town in \textbf{year 2010} was \textbf{12,000}. By \textbf{year 2020}, the population grew to \textbf{18,000}. Find the gradient of the population growth per year. \\
+Points: $(2010, 12000)$ and $(2020, 18000)$ \hfill $M_1$ \\
+$m = \frac{18000 - 12000}{2020 - 2010} = \frac{6000}{10}$ \hfill $M_1$ \\
+Result: $\mathbf{m = 600\text{ people/year}}$ \hfill $A_1$
+\end{solvingbox}
+
+\begin{solvingbox}{Question 6}
+A road rises \textbf{150 metres} vertically over a horizontal distance of \textbf{3,000 metres}. Find the gradient of the road (slope). \\
+Points: $(0, 0)$ and $(3000, 150)$ \hfill $M_1$ \\
+$m = \frac{150 - 0}{3000 - 0} = \frac{1}{20}$ \hfill $M_1$ \\
+Result: $\mathbf{m = 0.05}$ \hfill $A_1$
+\end{solvingbox}
+
+\begin{solvingbox}{Question 7}
+A salesman earns \textbf{Sh. 25,000} when he sells goods worth \textbf{Sh. 100,000}. He earns \textbf{Sh. 40,000} when he sells goods worth \textbf{Sh. 250,000}. Find the gradient of his commission. \\
+Points: $(100000, 25000)$ and $(250000, 40000)$ \hfill $M_1$ \\
+$m = \frac{40000 - 25000}{250000 - 100000} = \frac{15000}{150000}$ \hfill $M_1$ \\
+Result: $\mathbf{m = 0.1 \text{ (or } 10\%)}$ \hfill $A_1$
+\end{solvingbox}
+
+\newpage
+\subsection*{2.4.2 Equations Given One Point and Gradient}
+\addcontentsline{toc}{subsection}{2.4.2 Equations Given One Point and Gradient}
+
+\begin{solvingbox}{Question 1}
+A car rental company charges a fixed insurance fee plus \textbf{Sh. 40 per kilometre} ($m=40$). A customer travels \textbf{100 km} and is charged a total of \textbf{Sh. 6,500}. Find the equation of the cost. \\
+Point: $(100, 6500), m = 40$. \\
+$y - 6500 = 40(x - 100)$ \hfill $M_1$ \\
+$y = 40x - 4000 + 6500$ \hfill $M_1$ \\
+Result: $\mathbf{y = 40x + 2500}$ \hfill $A_1$
+\end{solvingbox}
+
+\begin{solvingbox}{Question 2}
+The value of a machine depreciates at a rate of \textbf{Sh. 5,000 per year} ($m=-5000$). After \textbf{3 years}, the machine is worth \textbf{Sh. 85,000}. Find the equation for its value $y$ after $x$ years. \\
+Point: $(3, 85000), m = -5000$. \\
+$y - 85000 = -5000(x - 3)$ \hfill $M_1$ \\
+$y = -5000x + 15000 + 85000$ \hfill $M_1$ \\
+Result: $\mathbf{y = -5000x + 100000}$ \hfill $A_1$
+\end{solvingbox}
+
+\begin{solvingbox}{Question 3}
+A plumber charges a call-out fee plus \textbf{Sh. 800 per hour} ($m=800$). For a job lasting \textbf{4 hours}, the total bill is \textbf{Sh. 4,700}. Find the equation for the total cost. \\
+$y - 4700 = 800(x - 4)$ \hfill $M_1$ \\
+$y = 800x - 3200 + 4700$ \hfill $M_1$ \\
+Result: $\mathbf{y = 800x + 1500}$ \hfill $A_1$
+\end{solvingbox}
+
+\begin{solvingbox}{Question 4}
+A balloon rises at a constant speed of \textbf{2 m/s} ($m=2$). After \textbf{10 seconds}, it is at a height of \textbf{25 metres}. Determine the equation relating height $y$ and time $x$. \\
+$y - 25 = 2(x - 10)$ \hfill $M_1$ \\
+$y = 2x - 20 + 25$ \hfill $M_1$ \\
+Result: $\mathbf{y = 2x + 5}$ \hfill $A_1$
+\end{solvingbox}
+
+\begin{solvingbox}{Question 5}
+A telecommunications company charges \textbf{Sh. 2 per minute} for calls. A user talks for \textbf{45 minutes} and has a total bill of \textbf{Sh. 140} (including tax). Find the equation. \\
+$y - 140 = 2(x - 45)$ \hfill $M_1$ \\
+$y = 2x - 90 + 140$ \hfill $M_1$ \\
+Result: $\mathbf{y = 2x + 50}$ \hfill $A_1$
+\end{solvingbox}
+
+\begin{solvingbox}{Question 6}
+A baker finds that the cost of making cakes increases by \textbf{Sh. 150} for every additional cake. If the total cost for \textbf{20 cakes is Sh. 5,000}, find the equation. \\
+$y - 5000 = 150(x - 20)$ \hfill $M_1$ \\
+$y = 150x - 3000 + 5000$ \hfill $M_1$ \\
+Result: $\mathbf{y = 150x + 2000}$ \hfill $A_1$
+\end{solvingbox}
+
+\newpage
+\subsection*{2.4.3 Equations Given Two Points}
+\addcontentsline{toc}{subsection}{2.4.3 Equations Given Two Points}
+
+\begin{solvingbox}{Question 1}
+The temperature of a liquid was \textbf{$20^\circ$C} at the \textbf{start (0 min)} and reached \textbf{$80^\circ$C} after \textbf{12 minutes}. Find the equation relating temperature $y$ and time $x$. \\
+Points: $(0, 20), (12, 80)$ \hfill $M_1$ \\
+$m = \frac{80 - 20}{12 - 0} = 5$ \hfill $M_1$ \\
+$y = 5x + 20$ (since $c=20$). \\
+Result: $\mathbf{y = 5x + 20}$ \hfill $A_1$
+\end{solvingbox}
+
+\begin{solvingbox}{Question 2}
+A publishing house sells \textbf{200 books} for \textbf{Sh. 40,000} and \textbf{500 books} for \textbf{Sh. 94,000}. Find the equation relating revenue $y$ to books $x$. \\
+$m = \frac{94000 - 40000}{500 - 200} = \frac{54000}{300} = 180$ \hfill $M_1$ \\
+$y - 40000 = 180(x - 200)$ \hfill $M_1$ \\
+$y = 180x - 36000 + 40000$. \\
+Result: $\mathbf{y = 180x + 4000}$ \hfill $A_1$
+\end{solvingbox}
+
+\begin{solvingbox}{Question 3}
+At a depth of \textbf{10 metres} underwater, the pressure is \textbf{2 atmospheres}. At \textbf{30 metres}, the pressure is \textbf{4 atmospheres}. Find the equation for pressure $P$ at depth $d$. \\
+Points: $(10, 2), (30, 4)$ \hfill $M_1$ \\
+$m = \frac{4 - 2}{30 - 10} = \frac{1}{10} = 0.1$ \hfill $M_1$ \\
+$P - 2 = 0.1(d - 10) \implies P = 0.1d + 1$. \\
+Result: $\mathbf{P = 0.1d + 1}$ \hfill $A_1$
+\end{solvingbox}
+
+\begin{solvingbox}{Question 4}
+A candle is \textbf{25 cm} tall when lit. After \textbf{4 hours}, it is \textbf{17 cm} tall. Find the equation of its height $h$ after $t$ hours. \\
+Points: $(0, 25), (4, 17)$ \hfill $M_1$ \\
+$m = \frac{17 - 25}{4 - 0} = -2$ \hfill $M_1$ \\
+$h = -2t + 25$. \\
+Result: $\mathbf{h = -2t + 25}$ \hfill $A_1$
+\end{solvingbox}
+
+\begin{solvingbox}{Question 5}
+A taxi trip of \textbf{5 km} costs \textbf{Sh. 600}, while a trip of \textbf{12 km} costs \textbf{Sh. 1,160}. Find the equation of the taxi fare. \\
+$m = \frac{1160 - 600}{12 - 5} = \frac{560}{7} = 80$ \hfill $M_1$ \\
+$y - 600 = 80(x - 5) \implies y = 80x - 400 + 600$ \hfill $M_1$ \\
+Result: $\mathbf{y = 80x + 200}$ \hfill $A_1$
+\end{solvingbox}
+
+\begin{solvingbox}{Question 6}
+In 2015, a school had \textbf{600 students}. By 2023, it had \textbf{920 students}. Find the linear equation for the number of students $S$ in terms of years $t$ since 2015. \\
+Points: $(0, 600), (8, 920)$ \hfill $M_1$ \\
+$m = \frac{920 - 600}{8 - 0} = 40$ \hfill $M_1$ \\
+$S = 40t + 600$. \\
+Result: $\mathbf{S = 40t + 600}$ \hfill $A_1$
+\end{solvingbox}
 
 \end{document}
