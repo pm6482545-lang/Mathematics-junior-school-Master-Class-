@@ -17,37 +17,39 @@
 
 % --- Graphics & Technical Drawing ---
 \usepackage{tikz}       
-\usetikzlibrary{shapes.geometric, positioning, arrows.meta, calc} 
+% Added '3d' and 'patterns' for Measurement shapes
+\usetikzlibrary{shapes.geometric, positioning, arrows.meta, calc, patterns, 3d} 
 \usepackage{pgfplots}             
 \pgfplotsset{compat=1.18}         
-
-\usetikzlibrary{arrows.meta, patterns, shapes.geometric}
-
-\usepackage[most]{tcolorbox}
-\newtcolorbox{solvingbox}[2][]{
-    colback=white,
-    colframe=primaryblue!75!black,
-    fonttitle=\bfseries,
-    title=#2,
-    breakable,
-    enhanced,
-    attach boxed title to top left={yshift=-2mm, xshift=2mm},
-    boxed title style={colback=primaryblue},
-    #1
-}
-
-% --- Tables & Formatting ---
-\usepackage[most]{tcolorbox}      
-\tcbuselibrary{breakable}         
-\usepackage{tabularx}             
-\usepackage{array}                
-\usepackage{tocloft}              
 
 % --- Custom Colors (Standard Elevation Pillar Palette) ---
 \definecolor{primaryblue}{RGB}{0, 51, 102}
 \definecolor{strandcolor}{RGB}{0, 102, 204}
 \definecolor{substrandcolor}{RGB}{0, 153, 76}
 \definecolor{lightgrey}{RGB}{245, 245, 245}
+
+% --- Advanced Box Setup ---
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{breakable, skins}
+
+% FIXED: Only ONE definition of solvingbox. 
+% This version supports the Marking Scheme header automatically.
+\newtcolorbox{solvingbox}[1]{%
+    colback=white, 
+    colframe=primaryblue!75!black, 
+    fonttitle=\bfseries, 
+    title=#1,
+    breakable,
+    enhanced,
+    attach boxed title to top left={yshift=-2mm, xshift=2mm},
+    boxed title style={colback=primaryblue},
+    before upper={\textbf{Step-by-Step Working} \hfill \textbf{Marking Scheme}\medskip\\}
+}
+
+% --- Tables & Formatting ---
+\usepackage{tabularx}             
+\usepackage{array}                
+\usepackage{tocloft}              
 
 % --- TOC Advanced Styling ---
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
@@ -59,23 +61,11 @@
 \setlength{\cftbeforesubsecskip}{2pt} 
 
 % --- Header/Footer Setup ---
-\fancypagestyle{contentpages}{
-    \fancyhf{}
-    \fancyhead[L]{\textit{Master Class Mathematics}}
-    \fancyhead[R]{Elevation Pillar}
-    \fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
-}
-
-% --- Custom Environment for Questions ---
-\newtcolorbox{solvingbox}[1]{%
-    colback=white, 
-    colframe=black!80, 
-    sharp corners, 
-    fonttitle=\bfseries, 
-    title=#1,
-    breakable,
-    before upper={\textbf{Step-by-Step Working} \hfill \textbf{Marking Scheme}\medskip\\}
-}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textit{Master Class Mathematics}}
+\fancyhead[R]{Elevation Pillar}
+\fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
 
 \begin{document}
 
