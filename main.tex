@@ -60,6 +60,14 @@
 \renewcommand{\cftsubsecfont}{\itshape\color{substrandcolor}}
 \renewcommand{\cftsubsecpagefont}{\normalfont\color{substrandcolor}}
 \setlength{\cftbeforesubsecskip}{2pt} 
+% --- Header Style Definition ---
+\fancypagestyle{contentpages}{
+    \fancyhf{}
+    \fancyhead[L]{\textit{Master Class Mathematics}}
+    \fancyhead[R]{Elevation Pillar}
+    \fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+    \renewcommand{\headrulewidth}{0.4pt}
+}
 
 % --- Header/Footer Setup ---
 \pagestyle{fancy}
