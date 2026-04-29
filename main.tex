@@ -1,4 +1,4 @@
-% --- Document Configuration ---
+  % --- Document Configuration ---
 \documentclass[12pt, a4paper, oneside]{article}
 
 % --- Essential Input & Layout ---
@@ -17,12 +17,13 @@
 
 % --- Graphics & Technical Drawing ---
 \usepackage{tikz}       
-% Added '3d' and 'patterns' for Measurement shapes
-\usetikzlibrary{shapes.geometric, positioning, arrows.meta, calc, patterns, 3d} 
+% Optimized libraries for Measurements (3d, patterns) and Graphs
+\usetikzlibrary{shapes.geometric, positioning, arrows.meta, calc, patterns, 3d, intersections} 
 \usepackage{pgfplots}             
 \pgfplotsset{compat=1.18}         
 
 % --- Custom Colors (Standard Elevation Pillar Palette) ---
+% These MUST remain here, above the tcolorbox definitions
 \definecolor{primaryblue}{RGB}{0, 51, 102}
 \definecolor{strandcolor}{RGB}{0, 102, 204}
 \definecolor{substrandcolor}{RGB}{0, 153, 76}
@@ -32,8 +33,8 @@
 \usepackage[most]{tcolorbox}
 \tcbuselibrary{breakable, skins}
 
-% FIXED: Only ONE definition of solvingbox. 
-% This version supports the Marking Scheme header automatically.
+% --- FIXED: Single definition of solvingbox ---
+% Supporting both the Blue Elevation Pillar style and the Marking Scheme header.
 \newtcolorbox{solvingbox}[1]{%
     colback=white, 
     colframe=primaryblue!75!black, 
@@ -72,7 +73,8 @@
 % --- 1. COVER PAGE ---
 \pagenumbering{gobble}
 \thispagestyle{empty}
-\newgeometry{margin=0cm} % Ensures image takes full page
+% Temporary geometry change for full-page image support
+\newgeometry{margin=0cm} 
 \noindent
 \begin{minipage}[t][\paperheight]{\paperwidth}
 \vspace*{-1mm}
